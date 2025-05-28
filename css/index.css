@@ -1,0 +1,36 @@
+/* ~~~~~~~~~~~ Base styling ~~~~~~~~~~~~~*/
+
+body {
+  background-color: #f5f5f5;    /* same soft gray as portfolio */
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #1e1e1e;   /* charcoal text */
+  padding: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* ~~~~~~~~~~ Main heading style ~~~~~~~~ */
+
+h1 {
+  color: #2e4057;   /* deep blue from portfolio */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* ~~~~~~~~~ Weather box container ~~~~~~~~ */
+
+#weather-box {
+  background-color: #ffffff;     /* clean white box */
+  border-radius: 8px;   /* minimally rounded corners */
+  padding: 1rem;
+  max-width: 400px;
+  margin: 2rem auto;    /* centers it horizontally */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);     /* subtle shadow */
+}
+
+/* ~~~~~~~~ Text style for data points ~~~~~~~~~~~~~ */
+
+#weather-box p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
