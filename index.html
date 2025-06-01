@@ -3,23 +3,86 @@
   <head>
     <title>Weather API Project</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Portfolio site for Irina Lo, web development, experience, connect links." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio site for Irina Lo, web development, experience, connect links."
+    />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Irina Lo" />
 
-    <link href="css/index.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
-    </head>
-<body>
-  <h1>Weather in San Francisco</h1>
+    <link href="css/index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- <h1>Weather in San Francisco</h1>
 
-  <section id="weather-box">
+  <section id="weather-box"> -->
     <!-- Source: Open-Meteo API.  Weather data from the source will appear HERE  -->
-  </section>
+    <!-- </section> -->
 
-  <script src="js/index.js"></script>
-</body>
+    <!-- ~~~~~~~~~~~~~~~~~~~~ Background image ~~~~~~~~~~~~~~~~~~~~ -->
+
+    <img
+      src="images/skyscape_deco2.jpg"
+      alt="dreamy background"
+      class="background-image"
+    />
+
+    <main>
+      <!-- ~~~~~~~~~~~~~~~~~~~~ Current weather data ~~~~~~~~~~~~~~~~~~~~ -->
+
+      <!-- ~~~~~~~~~~ Search box ~~~~~~~~~~ -->
+
+      <h2 class="section-title">Current Weather</h2>
+
+      <!-- <section class="content-box"> -->
+        <!-- <h2>Current Weather</h2> -->
+
+        <form id="weather-form">
+          <label for="location">Enter City or ZIP:</label>
+          <input type="text" id="location" name="location" required />
+
+          <label for="unit">Temperature Unit:</label>
+          <select id="unit" name="unit">
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+          </select>
+
+          <button type="submit">Search</button>
+        </form>
+        </section>
+
+        <!-- ~~~~~~~~~~ Search results box ~~~~~~~~~~ -->
+<h3 id="location-title" class="subsection-title"></h3>
+
+        <section id="weather-box" class="content-box" style="display: none">
+          <!-- Current weather data go here -->
+        </section>
+
+      <!-- ~~~~~~~~~~~~~~~~~~~~ Historical weather data ~~~~~~~~~~~~~~~~~~~~ -->
+
+      <section id="historical-section" style="display: none">
+        <!-- <h2>Historical Weather</h2> -->
+         <h2 class="section-title">Historical Weather</h2>
+
+        <form id="historical-form">
+          <label for="history-date">Pick a Date:</label>
+          <input type="date" id="history-date" name="history-date" required />
+          <button type="submit">Search</button>
+        </form>
+
+        <section id="historical-box">
+          <!-- Historical weather data go here -->
+        </section>
+      </section>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
 </html>

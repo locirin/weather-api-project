@@ -1,31 +1,96 @@
 /* ~~~~~~~~~~~ Base styling ~~~~~~~~~~~~~*/
 
 body {
-  background-color: #f5f5f5;    /* same soft gray as portfolio */
-  font-family: 'Roboto', Arial, sans-serif;
-  color: #1e1e1e;   /* charcoal text */
+  /* background-color: #f5f5f5;  same soft gray as portfolio */
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: "Roboto", Arial, sans-serif;
+  /* font-family: 'Roboto Flex', 'Roboto Serif', sans-serif; */
+  color: #1e1e1e; /* charcoal text */
   padding: 2rem;
   text-align: center;
   margin: 0;
+  line-height: 1.5;
+  position: relative;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ~~~~~~~~~~ Background image ~~~~~~~~ */
+.background-image {
+  position: fixed;
+  /* object-fit: cover; */
+  opacity: 0.85;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ~~~~~~~~~~ Background image ~~~~~~~~ */
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  display: block;
+  flex-direction: column;
+  /* text-align: left; */
+  gap: 2rem;
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+
+/* ~~~~~~~~~~ Content box style ~~~~~~~~ */
+.content-box {
+  /* background-color: rgba(255, 255, 255, 0.95); */
+  background-color: #ffffff;
+  border-radius: 8px; /* mediun rounded corners */
+  padding: 1.5rem 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  /* margin-top: 1rem; */
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ~~~~~~~~~~ Main heading style ~~~~~~~~ */
 
 h1 {
-  color: #2e4057;   /* deep blue from portfolio */
+  color: #2e4057; /* deep blue from portfolio */
   font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  color: #2e4057;
+  margin-top: -0.5rem;
   margin-bottom: 1rem;
 }
 
 /* ~~~~~~~~~ Weather box container ~~~~~~~~ */
 
 #weather-box {
-  background-color: #ffffff;     /* clean white box */
-  border-radius: 8px;   /* minimally rounded corners */
+  background-color: #ffffff; /* clean white box */
+  border-radius: 8px; /* minimally rounded corners */
   padding: 1rem;
   max-width: 400px;
-  margin: 2rem auto;    /* centers it horizontally */
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);     /* subtle shadow */
+  margin: 2rem auto; /* centers it horizontally */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
 }
 
 /* ~~~~~~~~ Text style for data points ~~~~~~~~~~~~~ */
@@ -33,4 +98,121 @@ h1 {
 #weather-box p {
   font-size: 1.1rem;
   margin: 0.5rem 0;
+}
+
+/* ~~~~~~~~ Form Style ~~~~~~~~~~~~~ */
+
+form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  text-align: left;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  display: block;
+  /* flex-direction: row; */
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #2e4057;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+form input,
+form select {
+  width: 80%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); */
+  border-radius: 4px;
+  /* text-align: left;   */
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); */
+  border-radius: 4px;
+  /* text-align: left;   */
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+form button {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #2e4057;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+  max-width: 200px;
+  text-align: center;
+  margin-top: 1.5rem auto 0 auto;
+  display: block;
+}
+
+form button:hover {
+  background-color: #1e2e3f;
+}
+
+/* ~~~~~~~~ Weather putput ~~~~~~~~~~~~~ */
+#weather-box,
+#historical-box {
+  margin-top: 1rem;
+  display: none;
+}
+
+#weather-box p,
+#historical-box p {
+  margin-bottom: 0.5rem;
+}
+
+/* ~~~~~~~~ Section Titles ~~~~~~~~~~~~~ */
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2e4057; /* deep blue*/
+}
+
+.section-title {
+  color: #2e4057;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* ~~~~~~~~ Historical Data ~~~~~~~~~~~~~ */
+
+#historical-box {
+  background-color: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  /* margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem; */
+  max-width: 400px;
+  margin: 2rem auto;
 }
