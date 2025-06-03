@@ -208,6 +208,10 @@ document
           .catch(function (error) {
             console.error("Error fetching weather:", error);
           });
+      })
+          .catch(function (error) {
+        console.error("Could not retrieve weather data:", error.message);
+        alert("Sorry, weather cannot be fetched for this location. Please check your input and try again.");
       });
   });
 
@@ -296,6 +300,15 @@ document
         // const title = document.createElement("h4");
         // title.textContent = `Historical Weather for ${date}`;
 
+
+// If searching again for historical data ==> emoving old h3 from previous search.
+        const historicalSection = document.getElementById("historical-section");
+      
+const existingTitle = historicalSection.querySelector("h3");
+if (existingTitle) {
+  existingTitle.remove();
+}
+
         // Moving Historical title outside the box
         const locationTitle = document.createElement("h3");
 
@@ -310,7 +323,7 @@ document
         locationTitle.classList.add("subsection-title");
 
         // Historical search result title goes above search results box
-        const historicalSection = document.getElementById("historical-section");
+        // const historicalSection = document.getElementById("historical-section");
         historicalSection.insertBefore(locationTitle, historyBox);
 
         const hi = document.createElement("p");
